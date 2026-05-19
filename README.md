@@ -17,59 +17,83 @@ The complete analysis, including visualizations, is created in Jupyter Notebook 
 </br>
 <h1 align="center">Data Structure</h1>
 
+
 Dataset used for this analysis can be found here: [dataset](dataset/user_events.csv).  
 
-![Data Structure](images/Data%20Structure.png)
+<div valign="top" align="center">
+    <img alt="Data Structure" src="images/Data%20Structure.png" />
+</div>
 
 <h1 align="center">Executive Summary</h1>
 
 Analysis reveals that the **lower stages of the conversion process (checkout and payment) are highly optimized**, showing minimal user drop-off. However, **the primary bottleneck occurs at the top of the funnel**, where only 31.2% of users proceed from product views to adding items to the cart. This indicates that improving conversion in these initial stages represents the biggest optimization opportunity.  
+
 **Organic traffic** emerged as the strongest overall revenue driver among marketing channels, generating both **high traffic volume and strong conversion performance**. **Email traffic delivered the highest revenue efficiency per visitor**, while **social traffic consistently underperformed in conversion quality despite generating substantial volume**.  
+
 The product portfolio shows balanced performance, with **Product 205** demonstrating the strongest balance between customer attention and conversion efficiency.  
+
 Customer activity peaks during **Sunday and Monday evenings**.  
+
 These findings suggest opportunities for optimizing campaign scheduling and marketing timing strategies and will be further explored in the following sections, along with recommendations for future actions.
+
+</br>
 
 <h1 align="center">Insights Deep-Dive</h1>
 <h2>1. Conversion Funnel</h2>
 
 We analyzed a dataset consisting of data from the last 30 days. This data represents the number of users at different stages of the funnel. Evidently, many users do not overcome the initial obstacle, abandoning our platform without even adding a product to their cart.
 
-| Funnel Stage | Users |
-| ------------ | ----: |
-| Page View    | 4268  |
-| Add to Cart  | 1332  |
-| Checkout     |  951  |
-| Payment      |  768  |
-| Purchase     |  708  |
+<div align="center">
+
+| Funnel Stage | Page View | Add to Cart | Checkout | Payment | Purchase |
+| :----------: | :-------: | :---------: | :------: | :-----: | :------: |
+| Users Count  | 4268      | 1332        | 951      | 768     | 708      |
+
+</div>
  
 One of the most important parts of our analysis was to determine the conversion rates between each stage in our behavioral funnel.  
 The initial stage, from **page view to product added to cart**, exhibits a **conversion rate of 31.2%**. That indicates that, approximately one-third of users who view a page, proceed to add a product to a cart, making this clearly the stage with the **highest user loss in the funnel**. One reason could be a high number of low-quality users who are merely "passersby" on our platform. We need high-intent users whose goal is to complete a transaction.    
 After successfully adding a product to a cart, **71,4% of users proceed to the checkout phase**, indicating no significant "cart hesitation" problems such as complex checkout flows, unexpected costs, or required registration.  
 Further along the funnel, conversion rates increase, with **80.8% of users in the checkout stage providing payment information**. Subsequently, **92.2% of those users complete the purchase**, suggesting our payment flow is well-optimized and robust, free from bugs and trust issues.
 **The overall conversion rate for the funnel is 16,6%**, meaning approximately one in six users on our platform purchases a product.  
-There appear to be no major issues in the lower stages of the funnel, these are performing quite well. Therefore, our primary goal should be to improve the first-stage conversion and transition more users to subsequent stages. 
+There appear to be no major issues in the lower stages of the funnel, these are performing quite well. Therefore, our primary goal should be to improve the first-stage conversion and transition more users to subsequent stages.  
+</br>
 
-![Conversion Rates in the Funnel](images/Conversion%20Rates.png)
+<div valign="top" align="center">
+    <img alt="Conversion Rates in the Funnel" src="images/Conversion%20Rates.png" />
+</div>
 
 <h2>2. Marketing Channel</h2>
 
 Our dataset comprises four acquisition channels: organic search, paid advertisements, email links, and social media posts (e.g., Facebook, Instagram, TikTok).
 The chart below highlights some interesting findings.  
 **Social media platforms** excel at attracting users to our websites and apps. However, these users tend to be low quality, resulting in a **very low purchase rate of only 6,7%**. This suggests that while our social media content is entertaining and engaging, it yields no concrete results.  
-The majority of users arrive via **organic search**, indicating that our search engine optimization effectively guides users to our platforms. With an **overall conversion rate of 17,1%**, we can be satisfied with this marketing channel's contribution, health, and scalability. 
+The majority of users arrive via **organic search**, indicating that our search engine optimization effectively guides users to our platforms. With an **overall conversion rate of 17,1%**, we can be satisfied with this marketing channel's contribution, health, and scalability.  
+</br>
 
-![Marketing Channel Conversion](images/Marketing%20Channel%20Conversion.png)
+<div valign="top" align="center">
+    <img alt="Marketing Channel Conversion" src="images/Marketing%20Channel%20Conversion.png" />
+</div>
+</br>
 
 **Paid ads have an even better view-to-purchase ratio - 21,1%**, meaning that 1 out of 5 users who click an advertisement banner buy our products.   
 Users who come through **email** links, whether from newsletters or promotional emails, appear to be **high-intent users, with 33,9% purchase rate**. Although email, as a digital marketing channel, is not as efficient for us in attracting many users, every third user who comes from this acquisition channel becomes a customer. This indicates that email is a strong performer in bringing high-quality traffic to our platforms.  
-All of the above indicates that a marketing channel with higher generating power does not necessarily lead to higher conversion efficiency.
+All of the above indicates that a marketing channel with higher generating power does not necessarily lead to higher conversion efficiency.  
 
-![Drop-off Rate](images/Drop-off%20Rate.png)
+</br>
+<div valign="top" align="center">
+    <img alt="Drop-off Rate" src="images/Drop-off%20Rate.png" />
+</div>
+</br>
 
 Users who come from social channels are specific. Mostly younger generations, who are intensive social media users, impulsively browse our platform and do not have high purchase intent. They don't know our brand and lack the trust needed to make transactions on unfamiliar territory. I wanted to investigate at which point in the funnel social users drastically drop off, as there was a possibility that checkout or payment presented a problematic stage for this group of users.  
-The most important insight from this analysis is the **severe early-stage users drop-off rate** (86,4%) observed, especially in the social traffic channel. A lot of users who originated from organic search (67,1%) or paid ads (62,8%) also fell at the first hurdle. In contrast, the email channel is doing an excellent job with only 37,1% view-to-cart drop-off rate. Later stages of the funnel are much more successful at user retention.
+The most important insight from this analysis is the **severe early-stage users drop-off rate** (86,4%) observed, especially in the social traffic channel. A lot of users who originated from organic search (67,1%) or paid ads (62,8%) also fell at the first hurdle. In contrast, the email channel is doing an excellent job with only 37,1% view-to-cart drop-off rate. Later stages of the funnel are much more successful at user retention.  
 
-![Marketing Channel Revenue](images/Channel%20Revenue.png)
+</br>
+<div valign="top" align="center">
+    <img alt="Marketing Channel Revenue" src="images/Channel%20Revenue.png" />
+</div>
+</br>
 
 Users acquired through social media demonstrate:
 - Very high abandonment between page view and add to cart
@@ -89,11 +113,14 @@ The findings suggest that **future business growth will depend less on increasin
 <h2>3. Product Performance</h2>
 
 This analysis indicates that product performance differences are relatively balanced across the portfolio, suggesting stable overall product health.  
-Product 205 demonstrates the strongest balance between customer attention and conversion efficiency, positioning it as the most commercially effective product in the catalog. Meanwhile, products such as 201 and 404 generate strong visibility but underperform in conversion efficiency, indicating potential optimization opportunities related to pricing, positioning, or product page experience. Product 102 potentially presents a hidden growth opportunity; it currently receives insufficient attention but demonstrates strong conversion rates when 
-engaged.  
-Overall, **the portfolio appears diversified, with no significant dependency on a single product for conversion performance**.
+Product 205 demonstrates the strongest balance between customer attention and conversion efficiency, positioning it as the most commercially effective product in the catalog. Meanwhile, products such as 201 and 404 generate strong visibility but underperform in conversion efficiency, indicating potential optimization opportunities related to pricing, positioning, or product page experience. Product 102 potentially presents a hidden growth opportunity: it currently receives insufficient attention but demonstrates strong conversion rates when engaged.  
+Overall, **the portfolio appears diversified, with no significant dependency on a single product for conversion performance**.  
 
-![Product Performance through the Funnel](images/Product%20Performance%20through%20the%20Funnel.png)
+</br>
+<div valign="top" align="center">
+    <img alt="Product Performance through the Funnel" src="images/Product%20Performance%20through%20the%20Funnel.png" />
+</div>
+</br>
 
 From this matrix, it's clear that most products generate very high revenue through organic traffic, with the exception of product 102, which is lagging. There is an excellent channel-product fit, particularly for **products 101, 201 and 404, where the acquisition channel is well-aligned with the product pages**, leading to strong performance.  
 Conversely, **the social channel consistently underperforms compared to other channels across most products**. While products 101 and 205 show solid performance, other products underperform. Products 102, 201 and 404 perform particularly poorly, generating almost four times less revenue than through organic traffic.  
@@ -102,17 +129,22 @@ The email audience does not react evenly across all products; products 102 and 2
 Total revenue is similarly distributed across products, with differences falling within normal limits. **The only product consistently falling behind is product 102, even in organic traffic. Products 101 and 205 stand out for their consistency across every acquisition channel, making them our most stable products. Product 201 responds well to intent-driven channels (Organic, Paid) but poorly to push channels (Email)**. This suggests it's a product purchased when users actively search for it, rather than when it is merely presented to them.  
 Overall, we can conclude that **our product portfolio has solid performance and is well-optimized. The main focus should be on optimizing acquisition channels.**
 
-![Product Performance by Marketing Channel](images/Product%20Performance%20by%20Marketing%20Channel.png)
+</br>
+<div valign="top" align="center">
+    <img alt="Product Performance by Marketing Channel" src="images/Product%20Performance%20by%20Marketing%20Channel.png" />
+</div>
 
 <h2>4. Time Analysis</h2>
 
 Overall, Sunday and Monday exhibit the strongest purchase activity, particularly **Sunday evening and Monday afternoon/evening**. Users show significantly higher purchase intent during weekends, likely due to relaxation on non-working days. Sunday maintains activity throughout the entire day, a pattern not observed on other days. In contrast, mid-week purchase activity is weaker and more fragmented, lacking clear peaks. User activity during the workweek is much less concentrated, with Thursday appearing as a "dead" day at almost all hours.   
-Evening hours generally outperform daytime hours, with **activity peaking after 19:00, primarily on Sunday and Monday**. Additionally, **some days show higher user purchase activity between 13:00 and 17:00**. This suggests customers tend to make purchases after working hours and their daily duties. 
+Evening hours generally outperform daytime hours, with **activity peaking after 19:00, primarily on Sunday and Monday**. Additionally, **some days show higher user purchase activity between 13:00 and 17:00**. This suggests customers tend to make purchases after working hours and their daily duties.  
 Some isolated early-morning activity spikes appear in the dataset, although additional data would be required to determine whether these represent stable behavioral patterns or short-term anomalies.  
 These findings provide actionable opportunities for campaign scheduling, retargeting optimization, and more efficient allocation of marketing activity throughout the week.
 
-![Day and Hour Purchase Peak](images/Day%20&%20Hour%20Purchase%20Peek.png)
-
+<div valign="top" align="center">
+    <img alt="Day and Hour Purchase Peak" src="images/Day%20&%20Hour%20Purchase%20Peek.png" />
+</div>
+</br>
 <h1 align="center">Recommendations</h1>
 <h2>1. Conversion Funnel</h2>
 
